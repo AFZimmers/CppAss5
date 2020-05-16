@@ -14,10 +14,12 @@ int main()
 
     Eigen::Matrix<double,64,2> mat;
     for (int i = 0; i < 64; ++i) {
+
         mat(i,0)=january.at(i);
         mat(i,1)=june.at(i);
     }
-    std::cout<<mat<<std::endl;
+
+   // std::cout<<mat<<std::endl;
 
     std::cout<<"Standardize the dataset"<<std::endl;
     MatrixXd centered = mat.rowwise() - mat.colwise().mean();
@@ -34,6 +36,11 @@ int main()
 
     std::cout << "The matrix of eigenvectors" << std::endl;
     std::cout << es.eigenvectors() << std::endl;
+
+    double totalVariance=cov(0,0)+cov(1,1);
+    std::cout << "total Variance : "<< totalVariance << std::endl;
+    std::cout << "principal component 1 portion of total Variance : " << cov(0,0)/totalVariance << std::endl;
+    std::cout << "principal component 2 portion of total Variance : " << cov(1,1)/totalVariance << std::endl;
 
     return 0;
 
