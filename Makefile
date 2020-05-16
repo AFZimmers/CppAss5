@@ -12,6 +12,8 @@ PROG = PCA
 
 $(PROG) : $(OBJ)
 	$(CC) $(CCFLAGS) $(SRC) -o PCA
+.cpp.o:
+	$(CC) $(CCFLAGS) -c $<
 
 depend:
 	$(CC) -M $(SRC) > incl.defs
