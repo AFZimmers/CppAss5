@@ -1,23 +1,9 @@
-#Makefile for Assignment 4
+#Makefile for Assignment 5
 #Alexander Zimmermann ZMMALE001
 
-CC=g++
+eigenCalcultor: main.o
+	g++ main.o -o egienCalculator
 
-CCFLAGS = -std=c++17 -I./eigen-3.3.7
+main.o:
+	g++ -c main.cpp -std=c++11
 
-
-SRC = $(wildcard src/main.cpp)
-OBJ = $(SRC:.cpp=.o)
-
-PROG = PCA
-
-$(PROG) : $(OBJ)
-	$(CC) $(CCFLAGS) $(SRC) -o PCA
-
-
-depend:
-	$(CC) -M $(SRC) > incl.defs
-
-clean:
-	rm -f *.o
-	rm -f PCA

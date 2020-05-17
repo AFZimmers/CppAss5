@@ -1,0 +1,15 @@
+Questions:
+1.The Eigenvalues for the principle component 1 are: 154.311
+  The Eigenvalues for the principle component 2 are: 9.16296
+2.The matrix of eigenvectors
+  0.939141 -0.343532
+  0.343532  0.939141
+  The Eigenvectors for the principle component 1 are: 0.939141 -0.343532
+  The Eigenvectors for the principle component 2 are: 0.343532  0.939141
+3.Covariance matrix is:
+    137.181 46.8283
+    46.8283 26.2925
+4.Total variance is: 163.474
+5.Calculated by dividing the variances for that component over the total variance.
+  principal component 1 portion of total Variance : 0.839164 which is 83.9164%
+  principal component 2 portion of total Variance : 0.160836 which is 16.0836%

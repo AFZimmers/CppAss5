@@ -1,10 +1,9 @@
 # CppAss5
 ***
-Image Clustering program is run using the syntax's:
-* for just a cout out put of cluster with grey histograms being used:
-`./clusterer Gradient_Numbers_PPMS -k 10 -bin 25`
-
-## Explanation 
+## Explanation
+* Will output all values and matrices to the terminal. Answers to the questions are in the answers.txt file.
+To run:
+`./egienCalculator`
 
 ## Files and Folders
-* **main** - Driver 
+* **main** - runs all my calculations
