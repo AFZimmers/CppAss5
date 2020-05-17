@@ -29,13 +29,13 @@ int main()
     MatrixXd cov = (centered.adjoint() * centered) / double(mat.rows() - 1);
     std::cout<<cov<<std::endl;
 
-    SelfAdjointEigenSolver<MatrixXd> es(cov);
+    EigenSolver<MatrixXd> es(cov);
 
     std::cout<<"Eigenvalues"<<std::endl;
-    std::cout<<es.eigenvalues()<<std::endl;
+    std::cout<<es.eigenvalues().real()<<std::endl;
 
     std::cout << "The matrix of eigenvectors" << std::endl;
-    std::cout << es.eigenvectors() << std::endl;
+    std::cout << es.eigenvectors().real() << std::endl;
 
     double totalVariance=cov(0,0)+cov(1,1);
     std::cout << "total Variance : "<< totalVariance << std::endl;
